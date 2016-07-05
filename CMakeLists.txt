@@ -3,8 +3,12 @@ cmake_policy(VERSION 3.0)
 
 project( thickedge )
 
-find_package( VTK )
+find_package( VTK 
+  COMPONENTS
+    vtkIOGeometry
+    vtkFiltersExtraction
+  )
 include( ${VTK_USE_FILE} )
 
 add_executable(thickedge main.cxx)
-target_link_libraries(thickedge ${VTK_LIBRARIES})
+target_link_libraries(thickedge vtkIOGeometry vtkFiltersExtraction)

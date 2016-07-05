@@ -1,0 +1,3 @@
+[submodule "yaap"]
+	path = yaap
+	url = git@github.com:jeromevelut/yaap.git

@@ -1,0 +1,21 @@
+-----------------
+   thickedge
+-----------------
+
+Original purpose is to provide a simple routine for STL mesh edges
+visualization.
+STL does not support edges; it describes faces only. This routine
+extract the edges from the mesh and creates tubes around each edge.
+
+Usage:
+ [shell]$ thickedge [-i/--input-file x] [-o/--output-file x] [-f/--faces x] [-r/--radius x] [-h/--help]
+        -i/--input-file : STL input file name (Required).
+        -o/--output-file : STL output file name (Required).
+        -f/--faces : Number of faces of the tubes (default to 3) (Optional).
+        -r/--radius : Radius of the tubes (default to 0.01) (Optional).
+        -h/--help : Display a brief help (Optional).
+
+Requirement: 
+- VTK-7.x (www.vtk.org)
+
+Uses yaap as a submodule (github.com/jeromevelut/yaap.git)
